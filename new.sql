@@ -1,0 +1,15 @@
+--create table cousin(coid int not null primary key,coname varchar(10) not null,Relation char,codept varchar,likable_value int)
+--INSERT into cousin(coid,coname,relation,codept,likable_value) values(1,'Raa','self','NomD',10),(2,'Edge','psil','EmpS',0),(3,'Dre','msil','Qun',5),(4,'RO','mbro','Athlt',7),(5,'Asta','Bro','BUsMn',10);
+--select * from cousin; 
+--select count(distinct likable_value)  from cousin;
+--select * from cousin where likable_value <= 5
+--select * from cousin where likable_value >= 5
+--select * from cousin;
+--select * from cousin where coid between 3 and 5;
+--update cousin set codept='BUsMn'where coid=4;
+--insert into cousin values(6,'J9','psil',null,null)
+--insert into  cousin(coid,coname,relation,codept,likable_value) values(7,'Cris10','msil',null,null),(8,'Boo','mbro','pilot',4),(9,'Shdw','psil',null,3),(10,'wed','psil',null,4),(11,'Dev','msil','BntyHtr',2);
+--update cousin set codept='BntyHtr' where coid>=6
+--select * from cousin;
+--update cousin set codept='Rulr'where coid between 2 and 3
+select max(likable_value) from cousin where likable_value< (select max(likable_value) from cousin)
